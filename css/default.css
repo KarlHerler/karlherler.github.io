@@ -1,56 +1,455 @@
+/* 
+  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+  html5doctor.com/html-5-reset-stylesheet/
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, 
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}                  
+
+article, aside, figure, footer, header, 
+hgroup, nav, section { display:block; }
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+/* END RESET CSS */
+
 /*	Default styles	*/
 body {
-	font-family: georgia, 'georgia', arial, serif;
+	font:13px sans-serif; *font-size:small; *font:x-small; line-height:1.22; 
+	font-family: georgia, 'georgia', serif;
 	font-weight: 85pt;
 	font-size: 1em;
-	text-align: right;
 }
 p {
 	line-height: 130%;
-	font-size: 0.9em;
 }
 a {
-	color: #000;
-	font-style: italic;
-	text-decoration: none;
-}
-a:hover {
 	color: #AB0000;
+	font-style: italic;
+}
+a:link { -webkit-tap-highlight-color: #AB0000; }
+a:hover, a:active { outline: none; }
+a:visited {
+	color: #333;
+}
+h1 {
+	font-size: 3em;
+	text-align: left;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 180px;
+	padding-bottom: 10px;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 120%;
+	font-style: normal;
+	padding-top: 200px;
 }
 
+h1,h2,h3,h4,h5,h6 { text-rendering: optimizeLegibility; }
+noscript {
+	font-family: 'helvetica', helvetica, arial, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+noscript div {
+	padding: 5px;
+	background: #666;
+	color: #DDD;
+	margin-left: auto; 
+	margin-right: auto;
+	text-align:center;
+}
 
+table { font-size:inherit; font:100%; }
 
-/*	Navi elements (header and footer)	*/
+select, input, textarea { font:99% sans-serif; }
+
+/* normalize monospace sizing 
+ * en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
+ */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+small { font-size:85%; }
+strong, th { font-weight: bold; }
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+pre { 
+  padding: 15px; 
+  
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+/* These selection declarations have to be separate.
+   No text-shadow: twitter.com/miketaylr/status/12228805301  */
+::-moz-selection{ background: #222; color:#fff; text-shadow: none; }
+::selection { background:#222; color:#fff; text-shadow: none; }
+
+html { overflow-y: scroll; }
+
+/* make buttons play nice in IE:    
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+ 
+/* bicubic resizing for non-native sized IMG: 
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+.spacer {
+	height: 120px;
+}
+
+.hidden { display:none; visibility:hidden; } 
+
+/* >> The Magnificent CLEARFIX << */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; } /* Hides from IE-mac \*/
+.clearfix { display: block; }
+
+/*	Navi elements (header, footer and scrollbar)	*/
 #topbar {
-	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+	font-family: 'Varela', 'Century Gothic','Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
 	text-transform: uppercase;
 	text-align: right;
-	font-size: 0.68em;
+	font-size: 10px;
 	font-style: normal;
 	height: 5px;
 	width: 100%;
-	min-width: 960px;
 	background: #000;
 }
-#footer {
-	padding-top: 200px; padding-right: 3em; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif; font-style: normal; font-size: 0.75em; color: #AAA;
+#topmenu {
+	padding: 8px 0px 8px 30px;
+	background: #000;
+	color: #FFF;
+	line-height: 120%;
+}
+#topmenu .left {
+	float: left;
+}
+#topmenu a {
+	padding-right: 30px;
+	padding-left: 10px;
+	font-style: normal;
+	text-decoration: none;
+	color: #777;
+}
+#topmenu a:hover {
+	color: #FFF;
+}
+#topmenu a#current {
+	color: #FFF;
+	font-weight: bold;
+}
+#footer{
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+	font-size: 0.68em;
+	font-style: normal;
+	color: #AAA;
+	padding: 0px 0px 40px 0px;
 }
 #footer a {
-	color: #666; font-style: normal;
+	font-style: normal;
 }
-#footer a:hover {
-	color: #AB0000;
+#footer .setRight {
+	text-align: right;
 }
 
-/*	Frontpage	*/
+/*	sitewide	*/
+.page {
+	padding: 0 15%;
+	max-width: 1000px;
+}
+
+/*	Porfolio	*/
+.portfolio p {
+	font-family: 'Baskerville', georgia, 'georgia', serif;
+	line-height: 28px;
+}
+.portfolio p a {
+	font-style: normal;
+}
+.portfolio div h1 {
+	font-size: 2.65em;
+	padding-bottom: 0px;
+}
+.portfolio .content {
+	max-width: 40.625em;
+	float: right;
+}
+.portfolio .role {
+	font-size: 1em;
+	font-style: italic;
+	font-weight: bold;
+}
+.portfolio .role .roles {
+	font-weight: normal;
+	color: #666;
+}
+#navibucket {
+	display: none;
+	position: fixed;
+	left: 5%;
+	top: 200px;
+	font-style: normal;
+	font-size: 1.14em;
+	line-height: 140%;
+	z-index: 100;
+}
+#navibucket li {
+	cursor: pointer;
+	list-style: none;
+	text-decoration: none;
+	color: #000;
+}
+#navibucket li:hover {
+	color: #AB0000;
+}
+#navibucket .toplevel {
+	font-weight: bold;
+}
+#navibucket .sublevel {
+	font-size: 0.9em;
+	font-weight: normal;
+}
+#navibucket .active {
+	color: #AB0000;
+}
+#navibucket .read {
+	color: #000;
+}
+
+/*	Home	*/
+.home {
+	text-align: right;
+}
+.home .heading {
+	font-size: 5em; 
+	font-style: normal;
+}
+.home p {
+	font-size: 0.9em;
+}
+
+.home a {
+	color: #000;
+	font-style: normal;
+	text-decoration: none;
+}
+.home a:hover {
+	color: #AB0000;
+}
+.home .content{
+	padding-top: 11.25em;
+}
+
+/*	About me page	*/
+.frontpage {
+	font-size: 1.10em;
+	font-style: italic;
+	line-height: 170%;
+	text-rendering: optimizeLegibility;
+}
 .frontpage .content{
 	padding-top: 180px;
+	max-width: 40.625em;
+	float: right;
+	padding: ;
 }
-.facebook a:hover {
+.frontpage a {
+	color: #000;
+	text-decoration: none;
+}
+.frontpage a:hover {
 	color: #AB0000;
+}
+.frontpage a.mid {
+	font-size: 1.5em;	
+}
+.frontpage a.bigger {
+	font-size: 1.2em;	
+}
+.frontpage span.small {
+	font-size: 0.8em;
+}
+
+/** betanote */
+#betanote {
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+	font-size: 0.68em;
+	font-style: normal;
+	color: #AAA;
+	padding-top: 10px;
+	text-align: center;
 }
 
 /*	Fix for @anywhere iframe	*/
 iframe {
 	width: 0;
 }
+
+/*
+ * 
+ * 
+ */
+@media screen and (max-width: 1000px) {
+	#navibucket {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+/*
+ * 
+ * 
+ */
+@media screen and (max-width: 575px) {
+  
+	/* Home */
+	.home .heading {
+		font-size: 3.5em; 
+		font-style: normal;
+	}
+	.page {
+		padding: 0 5% !important;
+	}
+}
+
+/*
+ *	iPhone and smaller screen devices
+ *
+ */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+	.portfolio .grid_8 {
+		max-width: 290px;
+	}
+}
+@media screen and (max-width: 480px) {
+	#topbar {
+		font-size: 12px;
+	}
+	
+	#topmenu {
+		padding: 10px 0px 10px 15px;
+		line-height: 120%;
+	}
+	#topmenu a {
+		padding-right: 10px;
+		padding-left: 10px;
+		color: #909090;
+	}
+	#topbar nobr {
+		padding-right: 1px !important;
+	}
+	#topbar nobr span {
+		display: none;
+		visibility: hidden;
+	}
+	
+	.home .content{
+		padding-top: 7.5em;
+	}
+	
+	.portfolio div h1 {
+		font-size: 2em;
+	}
+	
+	.portfolio div h2 {
+		font-size: 1.2em;
+	}
+	.portfolio .grid_8 {
+		width: 100% !important;
+		max-width: 18.75em;
+	}
+	.portfolio .grid_3 {
+		width: 0% !important;
+		max-width: 0px !important;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.home .heading {
+		font-size: 3em;
+	}
+}
+
+/* 
+ * print styles
+ * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/ 
+ */
+@media print {
+  * { background: transparent !important; color: #444 !important; text-shadow: none; }
+
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+
+  a:after { content: " (" attr(href) ")"; } 
+
+  abbr:after { content: " (" attr(title) ")"; }
+  
+  .ir a:after { content: ""; }  /* Don't show links for images */
+  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  
+  img { page-break-inside: avoid; }
+
+  @page { margin: 0.5cm; }
+
+  p, h2, h3 { orphans: 3; widows: 3; }
+
+  h2, h3{ page-break-after: avoid; }
+}
+
+
