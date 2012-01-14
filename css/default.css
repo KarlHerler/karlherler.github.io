@@ -1,0 +1,56 @@
+/*	Default styles	*/
+body {
+	font-family: georgia, 'georgia', arial, serif;
+	font-weight: 85pt;
+	font-size: 1em;
+	text-align: right;
+}
+p {
+	line-height: 130%;
+	font-size: 0.9em;
+}
+a {
+	color: #000;
+	font-style: italic;
+	text-decoration: none;
+}
+a:hover {
+	color: #AB0000;
+}
+
+
+
+/*	Navi elements (header and footer)	*/
+#topbar {
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+	text-transform: uppercase;
+	text-align: right;
+	font-size: 0.68em;
+	font-style: normal;
+	height: 5px;
+	width: 100%;
+	min-width: 960px;
+	background: #000;
+}
+#footer {
+	padding-top: 200px; padding-right: 3em; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif; font-style: normal; font-size: 0.75em; color: #AAA;
+}
+#footer a {
+	color: #666; font-style: normal;
+}
+#footer a:hover {
+	color: #AB0000;
+}
+
+/*	Frontpage	*/
+.frontpage .content{
+	padding-top: 180px;
+}
+.facebook a:hover {
+	color: #AB0000;
+}
+
+/*	Fix for @anywhere iframe	*/
+iframe {
+	width: 0;
+}
