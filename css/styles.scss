@@ -1,4 +1,7 @@
-/* 
+---
+---
+
+/*
   html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
   v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
   html5doctor.com/html-5-reset-stylesheet/
@@ -13,7 +16,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, figure, footer, header, 
+article, aside, figure, footer, header,
 hgroup, menu, nav, section, menu,
 time, mark, audio, video {
   margin:0;
@@ -23,9 +26,9 @@ time, mark, audio, video {
   font-size:100%;
   vertical-align:baseline;
   background:transparent;
-}                  
+}
 
-article, aside, figure, footer, header, 
+article, aside, figure, footer, header,
 hgroup, nav, section { display:block; }
 
 nav ul { list-style:none; }
@@ -55,7 +58,7 @@ input, select { vertical-align:middle; }
 
 /*	Default styles	*/
 body {
-	font:13px sans-serif; *font-size:small; *font:x-small; line-height:1.22; 
+	font:13px sans-serif; *font-size:small; *font:x-small; line-height:1.22;
 	font-family: georgia, 'georgia', serif;
 	font-weight: 85pt;
 	font-size: 1em;
@@ -97,7 +100,7 @@ noscript div {
 	padding: 5px;
 	background: #666;
 	color: #DDD;
-	margin-left: auto; 
+	margin-left: auto;
 	margin-right: auto;
 	text-align:center;
 }
@@ -106,7 +109,7 @@ table { font-size:inherit; font:100%; }
 
 select, input, textarea { font:99% sans-serif; }
 
-/* normalize monospace sizing 
+/* normalize monospace sizing
  * en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
  */
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
@@ -117,9 +120,9 @@ strong, th { font-weight: bold; }
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
 
-pre { 
-  padding: 15px; 
-  
+pre {
+  padding: 15px;
+
   /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
   white-space: pre; /* CSS2 */
   white-space: pre-wrap; /* CSS 2.1 */
@@ -140,11 +143,11 @@ label, input[type=button], input[type=submit], button { cursor: pointer; }
 
 html { overflow-y: scroll; }
 
-/* make buttons play nice in IE:    
+/* make buttons play nice in IE:
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
 button {  width: auto; overflow: visible; }
- 
-/* bicubic resizing for non-native sized IMG: 
+
+/* bicubic resizing for non-native sized IMG:
    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
@@ -152,7 +155,7 @@ button {  width: auto; overflow: visible; }
 	height: 120px;
 }
 
-.hidden { display:none; visibility:hidden; } 
+.hidden { display:none; visibility:hidden; }
 
 /* >> The Magnificent CLEARFIX << */
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
@@ -277,7 +280,7 @@ button {  width: auto; overflow: visible; }
 	text-align: right;
 }
 .home .heading {
-	font-size: 5em; 
+	font-size: 5em;
 	font-style: normal;
 }
 .home p {
@@ -303,11 +306,10 @@ button {  width: auto; overflow: visible; }
 	line-height: 170%;
 	text-rendering: optimizeLegibility;
 }
-.frontpage .content{
+.frontpage .content {
 	padding-top: 180px;
 	max-width: 40.625em;
 	float: right;
-	padding: ;
 }
 .frontpage a {
 	color: #000;
@@ -317,10 +319,10 @@ button {  width: auto; overflow: visible; }
 	color: #AB0000;
 }
 .frontpage a.mid {
-	font-size: 1.5em;	
+	font-size: 1.5em;
 }
 .frontpage a.bigger {
-	font-size: 1.2em;	
+	font-size: 1.2em;
 }
 .frontpage span.small {
 	font-size: 0.8em;
@@ -342,8 +344,8 @@ iframe {
 }
 
 /*
- * 
- * 
+ *
+ *
  */
 @media screen and (max-width: 1000px) {
 	#navibucket {
@@ -353,14 +355,14 @@ iframe {
 }
 
 /*
- * 
- * 
+ *
+ *
  */
 @media screen and (max-width: 575px) {
-  
+
 	/* Home */
 	.home .heading {
-		font-size: 3.5em; 
+		font-size: 3.5em;
 		font-style: normal;
 	}
 	.page {
@@ -381,7 +383,7 @@ iframe {
 	#topbar {
 		font-size: 12px;
 	}
-	
+
 	#topmenu {
 		padding: 10px 0px 10px 15px;
 		line-height: 120%;
@@ -398,15 +400,15 @@ iframe {
 		display: none;
 		visibility: hidden;
 	}
-	
+
 	.home .content{
 		padding-top: 7.5em;
 	}
-	
+
 	.portfolio div h1 {
 		font-size: 2em;
 	}
-	
+
 	.portfolio div h2 {
 		font-size: 1.2em;
 	}
@@ -426,23 +428,23 @@ iframe {
 	}
 }
 
-/* 
+/*
  * print styles
- * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/ 
+ * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/
  */
 @media print {
   * { background: transparent !important; color: #444 !important; text-shadow: none; }
 
   a, a:visited { color: #444 !important; text-decoration: underline; }
 
-  a:after { content: " (" attr(href) ")"; } 
+  a:after { content: " (" attr(href) ")"; }
 
   abbr:after { content: " (" attr(title) ")"; }
-  
+
   .ir a:after { content: ""; }  /* Don't show links for images */
-  
+
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  
+
   img { page-break-inside: avoid; }
 
   @page { margin: 0.5cm; }
