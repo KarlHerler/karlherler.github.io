@@ -1,8 +1,21 @@
-$primary-fonts: georgia, 'georgia', serif;
-$heading-fonts: $primary-fonts;
-$topbar-fonts: 'Varela', 'Century Gothic','Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
-$footer-fonts: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+// These are the Material design 800 colors
+$color-white:  #fff;
+$color-grey:   #212121;
+$color-red:    #c62828;
+$color-blue:   #1565c0;
+$color-cyan:   #00838f;
+$color-teal:   #00695c;
+$color-green:  #2e7d32;
+$color-orange: #d84315;
 
-$background-color: #fff;
-$text-color: #212121;
-$link-color: #c62828;
+// Font-families
+$primary-fonts: 'Open Sans', sans-serif;
+$heading-fonts: 'Open Sans Condensed', sans-serif;
+$topbar-fonts:  $primary-fonts;
+$footer-fonts:  $primary-fonts;
+
+// Color aliases
+$background-color: $color-white;
+$text-color:       $color-grey;
+$link-color:       $color-red;
+
