@@ -1,73 +1,20 @@
 ---
 ---
-
-/*
-  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
-  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
-  html5doctor.com/html-5-reset-stylesheet/
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, figure, footer, header,
-hgroup, menu, nav, section, menu,
-time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
-}
-
-article, aside, figure, footer, header,
-hgroup, nav, section { display:block; }
-
-nav ul { list-style:none; }
-
-blockquote, q { quotes:none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after { content:''; content:none; }
-
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
-
-ins { background-color:#ff9; color:#000; text-decoration:none; }
-
-mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
-
-del { text-decoration: line-through; }
-
-abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
-
-/* tables still need cellspacing="0" in the markup */
-table { border-collapse:collapse; border-spacing:0; }
-
-hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
-
-input, select { vertical-align:middle; }
-/* END RESET CSS */
+@import "reset";
+@import "theme";
 
 /*	Default styles	*/
 body {
-	font:13px sans-serif; *font-size:small; *font:x-small; line-height:1.22;
-	font-family: georgia, 'georgia', serif;
+	font-family: $primary-fonts;
 	font-weight: 85pt;
 	font-size: 1em;
+    background: $background-color;
 }
 p {
 	line-height: 130%;
 }
 a {
-	color: #AB0000;
+	color: $link-color;
 	font-style: italic;
 }
 a:link { -webkit-tap-highlight-color: #AB0000; }
@@ -90,7 +37,10 @@ h2 {
 	padding-top: 200px;
 }
 
-h1,h2,h3,h4,h5,h6 { text-rendering: optimizeLegibility; }
+h1,h2,h3,h4,h5,h6 {
+  text-rendering: optimizeLegibility;
+  font-family: $heading-fonts;
+}
 noscript {
 	font-family: 'helvetica', helvetica, arial, sans-serif;
 	font-weight: bold;
@@ -138,8 +88,8 @@ label, input[type=button], input[type=submit], button { cursor: pointer; }
 
 /* These selection declarations have to be separate.
    No text-shadow: twitter.com/miketaylr/status/12228805301  */
-::-moz-selection{ background: #222; color:#fff; text-shadow: none; }
-::selection { background:#222; color:#fff; text-shadow: none; }
+::-moz-selection{ background: $text-color; color: $background-color; text-shadow: none; }
+::selection { background: $text-color; color: $background-color; text-shadow: none; }
 
 html { overflow-y: scroll; }
 
@@ -165,19 +115,19 @@ button {  width: auto; overflow: visible; }
 
 /*	Navi elements (header, footer and scrollbar)	*/
 #topbar {
-	font-family: 'Varela', 'Century Gothic','Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+	font-family: $topbar-fonts;
 	text-transform: uppercase;
 	text-align: right;
 	font-size: 10px;
 	font-style: normal;
 	height: 5px;
 	width: 100%;
-	background: #000;
+	background: $text-color;
 }
 #topmenu {
 	padding: 8px 0px 8px 30px;
-	background: #000;
-	color: #FFF;
+	background: $text-color;
+	color: $background-color;
 	line-height: 120%;
 }
 #topmenu .left {
@@ -191,14 +141,14 @@ button {  width: auto; overflow: visible; }
 	color: #777;
 }
 #topmenu a:hover {
-	color: #FFF;
+	color: $background-color;
 }
 #topmenu a#current {
-	color: #FFF;
+	color: $background-color;
 	font-weight: bold;
 }
 #footer{
-	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+	font-family: $footer-fonts;
 	font-size: 0.68em;
 	font-style: normal;
 	color: #AAA;
@@ -219,7 +169,7 @@ button {  width: auto; overflow: visible; }
 
 /*	Porfolio	*/
 .portfolio p {
-	font-family: 'Baskerville', georgia, 'georgia', serif;
+	font-family: $primary-fonts;
 	line-height: 28px;
 }
 .portfolio p a {
@@ -256,10 +206,10 @@ button {  width: auto; overflow: visible; }
 	cursor: pointer;
 	list-style: none;
 	text-decoration: none;
-	color: #000;
+	color: $text-color;
 }
 #navibucket li:hover {
-	color: #AB0000;
+	color: $link-color;
 }
 #navibucket .toplevel {
 	font-weight: bold;
@@ -269,10 +219,10 @@ button {  width: auto; overflow: visible; }
 	font-weight: normal;
 }
 #navibucket .active {
-	color: #AB0000;
+	color: $link-color;
 }
 #navibucket .read {
-	color: #000;
+	color: $text-color;
 }
 
 /*	Home	*/
@@ -288,12 +238,12 @@ button {  width: auto; overflow: visible; }
 }
 
 .home a {
-	color: #000;
+	color: $text-color;
 	font-style: normal;
 	text-decoration: none;
 }
 .home a:hover {
-	color: #AB0000;
+	color: $link-color;
 }
 .home .content{
 	padding-top: 11.25em;
@@ -312,11 +262,11 @@ button {  width: auto; overflow: visible; }
 	float: right;
 }
 .frontpage a {
-	color: #000;
+	color: $text-color;
 	text-decoration: none;
 }
 .frontpage a:hover {
-	color: #AB0000;
+	color: $link-color;
 }
 .frontpage a.mid {
 	font-size: 1.5em;
@@ -330,7 +280,7 @@ button {  width: auto; overflow: visible; }
 
 /** betanote */
 #betanote {
-	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+	font-family: $footer-fonts;
 	font-size: 0.68em;
 	font-style: normal;
 	color: #AAA;
