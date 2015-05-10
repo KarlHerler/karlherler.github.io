@@ -24,11 +24,7 @@ a:visited {
 }
 h1 {
 	font-size: 3em;
-	text-align: left;
 	font-style: normal;
-	font-weight: normal;
-	padding-top: 180px;
-	padding-bottom: 10px;
 }
 h2 {
 	font-size: 1.5em;
@@ -37,9 +33,10 @@ h2 {
 	padding-top: 200px;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,.heading {
   text-rendering: optimizeLegibility;
   font-family: $heading-fonts;
+  font-weight: bold;
 }
 noscript {
 	font-family: 'helvetica', helvetica, arial, sans-serif;
@@ -230,7 +227,7 @@ button {  width: auto; overflow: visible; }
 	text-align: right;
 }
 .home .heading {
-	font-size: 5em;
+	font-size: 6em;
 	font-style: normal;
 }
 .home p {
